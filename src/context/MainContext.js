@@ -1,6 +1,7 @@
 import { createContext } from "react";
 
 
-const MainContext = createContext();
+const MainContext = createContext({ goods: [] });
+
 
 export default MainContext;
