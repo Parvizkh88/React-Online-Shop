@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import MainContext from "../../context/MainContext";
 
 const Header = () => {
   let { basket } = useContext(MainContext);
+  let navigate = useNavigate();
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,15 +26,20 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="d-flex justify-content-between align-items-center">
-          <button className="btn btn-success">Basket</button>
+          <button
+            className="btn btn-success"
+            onClick={() => navigate("/basket")}
+          >
+            Basket
+          </button>
           <p className="mx-3 my-0 py-0">{basket.length}</p>
         </div>
         {/* </div> */}
