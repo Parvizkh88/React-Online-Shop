@@ -3,6 +3,8 @@ import MainContext from "./MainContext";
 
 const Provider = ({ children }) => {
   const [goods, setGoods] = useState([]);
+  const [basket, setBasket] = useState([]);
+
   useEffect(() => {
     setGoods([
       {
@@ -57,7 +59,9 @@ const Provider = ({ children }) => {
   }, []);
 
   return (
-    <MainContext.Provider value={{ goods }}>{children}</MainContext.Provider>
+    <MainContext.Provider value={{ goods, basket, setBasket }}>
+      {children}
+    </MainContext.Provider>
   );
 };
 

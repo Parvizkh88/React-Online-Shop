@@ -4,10 +4,16 @@ import MainContext from "../context/MainContext";
 
 const Detail = () => {
   const { goodsId } = useParams();
-  const { goods } = useContext(MainContext);
+  const { goods, setBasket, basket } = useContext(MainContext);
 
   let dataToShow = goods.find((item) => item.id == goodsId);
-  console.log(dataToShow);
+
+  const handleAddToCart = () => {
+    let copy = [...basket];
+    copy.push(dataToShow);
+    setBasket(copy);
+  };
+
   return (
     <div className="container">
       <div className="shadow-x1 rounded border-1 mx-auto mt-4">
@@ -17,6 +23,9 @@ const Detail = () => {
           <h5>{dataToShow?.price}</h5>
         </div>
         <h6>{dataToShow?.description}</h6>
+        <div className="btn btn-success mt-3" onClick={handleAddToCart}>
+          Add To Cart
+        </div>
       </div>
     </div>
   );

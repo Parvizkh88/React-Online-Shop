@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container mt-3">
       <Advertisement />
       {category.map((item) => (
         <CategoryShower
