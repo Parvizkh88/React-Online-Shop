@@ -7,7 +7,11 @@ const CategoryShower = ({ category, goods }) => {
     <div className="row my-3">
       <p style={{ fontWeight: "bold" }}>{category.name}</p>
       {goods.map((item) => (
-        <Goods title={item.title} description={item.description} />
+        <Goods
+          title={item.title}
+          description={item.description}
+          goodsId={item.id}
+        />
       ))}
     </div>
   );
