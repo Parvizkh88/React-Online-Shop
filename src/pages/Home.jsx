@@ -21,6 +21,7 @@ const Home = () => {
       <Advertisement />
       {category.map((item) => (
         <CategoryShower
+          key={item.id}
           goods={goods.filter((good) => good.categoryId == item.id)}
           category={item}
         />

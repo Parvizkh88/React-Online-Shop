@@ -6,6 +6,8 @@ import Detail from "../pages/Detail";
 import Header from "../components/common/Header";
 import Basket from "../pages/Basket";
 import Login from "../pages/Login";
+import useLogin from "../hooks/useLogin";
+import NotFound from "../pages/NotFound";
 
 const MainRouter = () => {
   return (
@@ -14,8 +16,9 @@ const MainRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/goods/:goodsId" element={<Detail />} />
-        <Route path="/basket" element={<Basket />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/basket" element={<Basket />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

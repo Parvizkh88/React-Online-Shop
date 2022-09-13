@@ -1,7 +1,13 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router";
 import MainContext from "../context/MainContext";
+import useLogin from "../hooks/useLogin";
 
 const Basket = () => {
+  let token = useLogin();
+  let navigate = useNavigate();
+  if (!token) navigate("/login");
+
   const { basket } = useContext(MainContext);
 
   let totalAmount = 0;
