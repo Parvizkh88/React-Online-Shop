@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import MainContext from "../../context/MainContext";
+import useLogin from "../../hooks/useLogin";
 
 const Header = () => {
   let { basket } = useContext(MainContext);
   let navigate = useNavigate();
+  let token = useLogin();
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,16 +35,24 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        <div className="d-flex justify-content-between align-items-center">
+        {token ? (
+          <div className="d-flex justify-content-between align-items-center">
+            <button
+              className="btn btn-success"
+              onClick={() => navigate("/basket")}
+            >
+              Basket
+            </button>
+            <p className="mx-3 my-0 py-0">{basket.length}</p>
+          </div>
+        ) : (
           <button
-            className="btn btn-success"
-            onClick={() => navigate("/basket")}
+            className="btn btn-primary"
+            onClick={() => navigate("/login")}
           >
-            Basket
+            Login
           </button>
-          <p className="mx-3 my-0 py-0">{basket.length}</p>
-        </div>
-        {/* </div> */}
+        )}
       </div>
     </nav>
   );
