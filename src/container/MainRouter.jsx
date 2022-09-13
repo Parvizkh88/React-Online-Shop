@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Detail from "../pages/Detail";
 import Header from "../components/common/Header";
 import Basket from "../pages/Basket";
+import Login from "../pages/Login";
 
 const MainRouter = () => {
   return (
@@ -14,6 +15,7 @@ const MainRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/goods/:goodsId" element={<Detail />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
