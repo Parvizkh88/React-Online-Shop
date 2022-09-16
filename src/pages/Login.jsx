@@ -1,29 +1,20 @@
-import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router";
+import HTTPService from "../service/HTTPService";
+import UserService from "../service/UserService";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const [password, setPassword] = useState();
-
   const username = useRef();
+  const password = useRef();
 
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      let { data } = await axios.post("/api/login", {
-        username: username.current,
-        password,
-      });
-      localStorage.setItem("token", data.token);
-      navigate("/");
-    } catch (err) {
-      setError(true);
-    }
+    let result = await UserService.login(username.current, password.current);
+    result ? navigate("/") : setError(true);
   };
 
   return (
@@ -49,7 +40,7 @@ const Login = () => {
             type="password"
             className="p-2 border rounded"
             id="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => (password.current = e.target.value)}
           ></input>
         </div>
         {error && <p className="text-danger">Wrong Username or Password </p>}
