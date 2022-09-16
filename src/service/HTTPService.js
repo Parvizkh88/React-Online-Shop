@@ -17,7 +17,7 @@ axios.interceptors.response.use(function (response) {
     // throw error
     console.log(error);
     toast.error(error.response.statusText)
-    throw new Error()
+    throw error
 });
 
 

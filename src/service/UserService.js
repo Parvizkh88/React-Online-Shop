@@ -13,12 +13,9 @@ const UserService = {
         }
     },
     profile: async () => {
-        try {
-            const { data } = await HTTPService.get("/api/profile");
-            return data;
-        } catch (error) { }
+        const { data } = await HTTPService.get("/api/profile");
+        return data;
     }
-
 }
 
 export default UserService;
