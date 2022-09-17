@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import Camera1 from "../../asset/image/Camera1.jpg";
-import Camera2 from "../../asset/image/Camera2.jpg";
-import Camera3 from "../../asset/image/Camera3.jpg";
+import Laptop2 from "../../asset/image/Laptop2.jpg";
+import Camera7 from "../../asset/image/Camera7.jpg";
+import Mobile3 from "../../asset/image/Mobile3.jpg";
 
 const Advertisement = () => {
   const responsive = {
@@ -24,7 +24,7 @@ const Advertisement = () => {
   };
 
   return (
-    <div styly={{ maxWidth: "500px", margin: "auto" }}>
+    <div style={{ maxWidth: "1280px", margin: "auto" }}>
       <Carousel
         swipeable={false}
         draggable={false}
@@ -41,9 +41,9 @@ const Advertisement = () => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        <img src={Camera1} className="text-center d-flex mx-auto" />
-        <img src={Camera2} className="text-center d-flex mx-auto" />
-        <img src={Camera3} className="text-center d-flex mx-auto" />
+        <img src={Camera7} className="text-center d-flex mx-auto rounded-3" />
+        <img src={Laptop2} className="text-center d-flex mx-auto rounded-3" />
+        <img src={Mobile3} className="text-center d-flex mx-auto rounded-3" />
       </Carousel>
     </div>
   );

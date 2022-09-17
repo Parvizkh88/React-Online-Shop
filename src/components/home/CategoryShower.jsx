@@ -9,6 +9,7 @@ const CategoryShower = ({ category, goods }) => {
       {goods.map((item) => (
         <Goods
           key={item.id}
+          image={item.theImage}
           title={item.title}
           description={item.description}
           goodsId={item.id}
