@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import image from "../../asset/image/Camera3.jpg";
+// import image from "../../asset/image/Camera3.jpg";
 // import Camera3 from "../../context/Provider";
 
 // import { Card } from "react-bootstrap";

@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import Advertisement from "../components/home/Advertisement";
 import CategoryShower from "../components/home/CategoryShower";
-import Goods from "../components/home/Goods";
+// import Goods from "../components/home/Goods";
 // import Main from "../components/Main";
 import MainContext from "../context/MainContext";
 import videoBg from "../asset/video/videoBg.mp4";
+import Footer from "../components/common/Footer";
 
 const Home = () => {
   const [category, setCategory] = useState([]);
@@ -31,6 +32,7 @@ const Home = () => {
             category={item}
           />
         ))}
+        <Footer />
       </div>
     </div>
   );
