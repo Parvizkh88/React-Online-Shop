@@ -13,6 +13,7 @@ const Home = () => {
     setCategory([
       { id: 1, name: "Mobile" },
       { id: 2, name: "Camera" },
+      { id: 3, name: "Laptop" },
     ]);
   }, []);
 
