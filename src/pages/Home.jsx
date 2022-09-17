@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import Advertisement from "../components/home/Advertisement";
 import CategoryShower from "../components/home/CategoryShower";
-import Goods from "../components/home/Goods";
+// import Goods from "../components/home/Goods";
+// import Main from "../components/Main";
 import MainContext from "../context/MainContext";
+import videoBg from "../asset/video/videoBg.mp4";
+import Footer from "../components/common/Footer";
 
 const Home = () => {
   const [category, setCategory] = useState([]);
@@ -18,15 +21,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container mt-3">
-      <Advertisement />
-      {category.map((item) => (
-        <CategoryShower
-          key={item.id}
-          goods={goods.filter((good) => good.categoryId == item.id)}
-          category={item}
-        />
-      ))}
+    <div className="main">
+      <video src={videoBg} autoPlay loop muted />
+      <div className="container mt-3 content">
+        <Advertisement />
+        {category.map((item) => (
+          <CategoryShower
+            key={item.id}
+            goods={goods.filter((good) => good.categoryId == item.id)}
+            category={item}
+          />
+        ))}
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.main {
+  width: 100%;
+  height: 1000px;
+}
+video {
+  position: absolute;
+  /* top: 970px; */
+  width: 100%;
+  height: 945px;
+  object-fit: cover;
+  top: 60px;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+.myFooter {
+  background-color: #3a0ca3;
+  width: 100vw;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.myFooterLinks a {
+  color: white;
+  text-decoration: none;
+}
+.myFooterLinks a:hover {
+  color: black;
+}

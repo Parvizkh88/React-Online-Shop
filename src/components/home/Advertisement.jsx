@@ -24,7 +24,7 @@ const Advertisement = () => {
   };
 
   return (
-    <div style={{ maxWidth: "1280px", margin: "auto" }}>
+    <div style={{ maxWidth: "1280px", margin: "50px auto" }}>
       <Carousel
         swipeable={false}
         draggable={false}

@@ -95,7 +95,7 @@ const Provider = ({ children }) => {
         price: "800",
         title: "Fujifilm 11M",
         description:
-          "predefined chunks as necessary, making this the first true generator",
+          "predefined chunks as necessary, making this the first true",
       },
       {
         theImage:
@@ -105,7 +105,7 @@ const Provider = ({ children }) => {
         price: "550",
         title: "Canon R440",
         description:
-          "making this the first true generator Internet tend to repeat consectetur ",
+          "making this the first true generator Internet tend to repeat  ",
       },
       {
         theImage:
@@ -134,7 +134,7 @@ const Provider = ({ children }) => {
         price: "1500",
         title: "Asus ZenBook Duo ",
         description:
-          "predefined chunks as necessary, making this the first true generator",
+          "predefined chunks as necessary, making this the first true",
       },
       {
         theImage:
@@ -154,7 +154,7 @@ const Provider = ({ children }) => {
         price: "650",
         title: "HP Pavilion 14",
         description:
-          "software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "software like Aldus PageMaker including versions of Lorem.",
       },
       {
         theImage:
@@ -174,7 +174,7 @@ const Provider = ({ children }) => {
         price: "900",
         title: "Macbook Air M1",
         description:
-          "predefined chunks as necessary, making this the first true generator",
+          "predefined chunks as necessary, making this the first true",
       },
       {
         theImage:
