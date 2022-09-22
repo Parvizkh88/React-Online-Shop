@@ -40,7 +40,8 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        {token ? (
+        {/*The code below is to access to basket just in case that the user is logged in*/}
+        {/* {token ? (
           <div className="d-flex justify-content-between align-items-center">
             <button
               className="btn btn-success"
@@ -57,7 +58,16 @@ const Header = () => {
           >
             Login
           </button>
-        )}
+        )} */}
+        <div className="d-flex justify-content-between align-items-center">
+          <button
+            className="btn btn-success"
+            onClick={() => navigate("/basket")}
+          >
+            Basket
+          </button>
+          <p className="mx-3 my-0 py-0">{basket.length}</p>
+        </div>
       </div>
     </nav>
   );
